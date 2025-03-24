@@ -1,0 +1,23 @@
+{
+  "title": "Mobile Token Control",
+  "description": "Adjusts the mobile UI and adds control buttons.",
+  "version": "1.25.13",
+  "authors": [
+    {
+      "name": "Scheffi",
+      "url": "https://ko-fi.com/scheffi",
+      "flags": {}
+    }
+  ],
+  "compatibility": {
+    "minimum": "11",
+    "verified": "12",
+    "maximum": "999"
+  },
+  "esmodules": [
+    "scripts/mobile-control.js"
+  ],
+  "manifest": "https://dein-server.com/mobile-token-view/module.json",
+  "download": "https://dein-server.com/mobile-token-view.zip",
+  "id": "mobile-token-view"
+}
