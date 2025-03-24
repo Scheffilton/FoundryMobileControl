@@ -2,7 +2,7 @@
 
 Smartphone/tablet control for FoundryVTT - automatically detects if Android/iOS OS is used and applies the mobile view.
 
-# Functiona
+# Functional
 - Token selection (allows to select between own tokens)
 - Display part of the map (centered on selected token with field of view)
 - Controls in any directions
