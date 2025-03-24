@@ -19,6 +19,5 @@
     "scripts/mobile-control.js"
   ],
   "manifest": "https://raw.githubusercontent.com/Scheffilton/token-mobile-control/refs/heads/main/module.json",
-  "download": "https://github.com/Scheffilton/token-mobile-control/archive/refs/heads/main.zip",
-  "id": "mobile-token-view"
+  "download": "https://github.com/Scheffilton/token-mobile-control/archive/refs/heads/main.zip"
 }
