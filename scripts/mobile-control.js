@@ -1,3 +1,15 @@
+Hooks.once("init", () => {
+    // Register module settings
+    game.settings.register("mobile-token-control", "enableMap", {
+      name: game.i18n.localize("mobile-token-control.settings.enableMap"),
+      hint: game.i18n.localize("mobile-token-control.settings.enableMaphint"),
+      scope: "world",
+      config: true,
+      type: Boolean,
+      default: true
+    });
+}); 
+ 
  class MobileTokenControl {
     static init() {
         Hooks.once("ready", () => {
@@ -21,8 +33,11 @@
         document.getElementById("ui-left")?.style.setProperty("display", "none", "important");
         document.getElementById("ui-right")?.style.setProperty("display", "none", "important");
         document.getElementById("ui-bottom")?.style.setProperty("display", "none", "important");
-        document.getElementById("board")?.style.setProperty("display", "block", "important");
-
+        if (game.settings.get("mobile-token-control", "enableMap")) {
+            document.getElementById("board")?.style.setProperty("display", "block", "important");
+        } else {
+            document.getElementById("board")?.style.setProperty("display", "none", "important");
+        }
         MobileTokenControl.createTokenSelector();
         MobileTokenControl.createMovementControls();
         MobileTokenControl.createZoomControls();
@@ -212,13 +227,13 @@
     static applyDisplaySize() {
         const board = document.getElementById('board');
         board.style.position = 'fixed';
-        board.style.top = '10%';
+        board.style.top = '-5vh';
         board.style.left = '0';
         board.style.width = '100%';
-        board.style.height = '80%';
+        board.style.height = '100%';
         board.style.zIndex = '2'; // Ensure it is on top of other elements
         board.style.overflow = 'hidden'; // Hide overflow
-        board.style.clipPath = 'inset(35% 0 35% 0)'; // Show only the center
+        board.style.clipPath = 'inset(30vh 0 30vh 0)'; // Show only the center
     }
 
     static preventDragDrop() {
