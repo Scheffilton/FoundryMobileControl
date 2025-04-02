@@ -2,7 +2,7 @@
   "id": "mobile-token-control",
   "title": "Mobile Token Control",
   "description": "Adjusts the mobile UI and adds control buttons.",
-  "version": "1.25.13",
+  "version": "1.25.14",
   "authors": [
     {
       "name": "Scheffi",
@@ -15,9 +15,20 @@
     "verified": "12",
     "maximum": "12"
   },
-  "esmodules": [
-    "scripts/mobile-control.js"
+  "esmodules": ["scripts/mobile-control.js"],
+  "languages": [
+    {
+      "lang": "en",
+      "name": "English",
+      "path": "lang/en.json"
+    },
+    {
+      "lang": "de",
+      "name": "Deutsch",
+      "path": "lang/de.json"
+    }
   ],
-"manifest": "https://raw.githubusercontent.com/Scheffilton/token-mobile-control/main/module.json",
-"download": "https://github.com/Scheffilton/token-mobile-control/archive/main.zip"
+  
+  "manifest": "https://raw.githubusercontent.com/Scheffilton/token-mobile-control/refs/heads/main/module.json",
+  "download": "https://github.com/Scheffilton/token-mobile-control/archive/refs/heads/main.zip"
 }
