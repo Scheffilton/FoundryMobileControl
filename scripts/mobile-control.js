@@ -258,3 +258,14 @@ Hooks.once("ready", () => {
         }, 100);
     }
 });
+
+Hooks.on("canvasReady", () => {
+    if (MobileTokenControl.isMobile()) {
+        MobileTokenControl.applyMobileView();
+        if (game.settings.get("mobile-token-control", "enableMap")) {
+            document.getElementById("board")?.style.setProperty("display", "block", "important");
+        } else {
+            document.getElementById("board")?.style.setProperty("display", "none", "important");
+        }
+    }
+});
